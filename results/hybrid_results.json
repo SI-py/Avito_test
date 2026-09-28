@@ -1,0 +1,284 @@
+{
+  "settings": {
+    "seed": 20260927,
+    "groups": 3200,
+    "tune_groups": 1600,
+    "test_groups": 1600,
+    "retrieval_k": 180,
+    "top_k": 50,
+    "best_text_config": "mixed+char",
+    "best_structured_config": "mixed+char + location+microcats+pop",
+    "runtime_seconds": 477.15601086616516
+  },
+  "coverage": {
+    "validation_exact_query_profile": 0.85625,
+    "validation_exact_location_in_items": 0.8628125
+  },
+  "reranker": {
+    "feature_order": [
+      "mixed_reciprocal_rank",
+      "mixed_cosine",
+      "title_reciprocal_rank",
+      "title_cosine",
+      "params_reciprocal_rank",
+      "params_cosine",
+      "description_reciprocal_rank",
+      "description_cosine",
+      "char_reciprocal_rank",
+      "char_cosine",
+      "exact_location",
+      "location_transition_probability",
+      "exact_query_microcat_probability",
+      "microcat_centroid_similarity",
+      "popularity",
+      "log_reviews",
+      "rating"
+    ],
+    "coef": [
+      6.4478759765625,
+      10.12819766998291,
+      4.0755934715271,
+      2.766298532485962,
+      -0.4736977815628052,
+      -5.655447006225586,
+      2.368065357208252,
+      1.8525372743606567,
+      12.933125495910645,
+      7.615244388580322,
+      5.05203914642334,
+      35.827064514160156,
+      3.1849749088287354,
+      3.4445419311523438,
+      7.544900894165039,
+      2.986461877822876,
+      -7.941022872924805
+    ],
+    "intercept": [
+      -25.88286781311035
+    ]
+  },
+  "results": [
+    {
+      "name": "mixed",
+      "phase": "test",
+      "macro_recall50": 0.24791666666666667,
+      "micro_recall50": 0.2395543175487465
+    },
+    {
+      "name": "title",
+      "phase": "test",
+      "macro_recall50": 0.18664583333333332,
+      "micro_recall50": 0.18495821727019499
+    },
+    {
+      "name": "params",
+      "phase": "test",
+      "macro_recall50": 0.05208333333333333,
+      "micro_recall50": 0.05181058495821727
+    },
+    {
+      "name": "description",
+      "phase": "test",
+      "macro_recall50": 0.17600595238095237,
+      "micro_recall50": 0.17103064066852366
+    },
+    {
+      "name": "char",
+      "phase": "test",
+      "macro_recall50": 0.23009375,
+      "micro_recall50": 0.22785515320334263
+    },
+    {
+      "name": "union@all-channels oracle",
+      "phase": "test",
+      "macro_recall50": 0.6135505952380952,
+      "micro_recall50": 0.6161559888579388
+    },
+    {
+      "name": "mixed+char",
+      "phase": "tune",
+      "macro_recall50": 0.28179166666666666,
+      "micro_recall50": 0.2699771689497717
+    },
+    {
+      "name": "mixed+char",
+      "phase": "test",
+      "macro_recall50": 0.253625,
+      "micro_recall50": 0.24512534818941503
+    },
+    {
+      "name": "title+params+desc+char",
+      "phase": "tune",
+      "macro_recall50": 0.2673125,
+      "micro_recall50": 0.2579908675799087
+    },
+    {
+      "name": "title+params+desc+char",
+      "phase": "test",
+      "macro_recall50": 0.21591666666666665,
+      "micro_recall50": 0.2116991643454039
+    },
+    {
+      "name": "fielded-title-heavy",
+      "phase": "tune",
+      "macro_recall50": 0.25934375,
+      "micro_recall50": 0.2505707762557078
+    },
+    {
+      "name": "fielded-title-heavy",
+      "phase": "test",
+      "macro_recall50": 0.2074791666666667,
+      "micro_recall50": 0.20334261838440112
+    },
+    {
+      "name": "all-five",
+      "phase": "tune",
+      "macro_recall50": 0.27689583333333334,
+      "micro_recall50": 0.2659817351598174
+    },
+    {
+      "name": "all-five",
+      "phase": "test",
+      "macro_recall50": 0.23029166666666664,
+      "micro_recall50": 0.22395543175487465
+    },
+    {
+      "name": "mixed+char + exact-location",
+      "phase": "tune",
+      "macro_recall50": 0.37324999999999997,
+      "micro_recall50": 0.3618721461187215
+    },
+    {
+      "name": "mixed+char + transition-location",
+      "phase": "tune",
+      "macro_recall50": 0.40871874999999996,
+      "micro_recall50": 0.3955479452054795
+    },
+    {
+      "name": "mixed+char + transition+exact",
+      "phase": "tune",
+      "macro_recall50": 0.4197083333333333,
+      "micro_recall50": 0.4075342465753425
+    },
+    {
+      "name": "mixed+char + exact-microcat",
+      "phase": "tune",
+      "macro_recall50": 0.28710416666666666,
+      "micro_recall50": 0.2751141552511416
+    },
+    {
+      "name": "mixed+char + centroid-microcat",
+      "phase": "tune",
+      "macro_recall50": 0.2811666666666667,
+      "micro_recall50": 0.2694063926940639
+    },
+    {
+      "name": "mixed+char + microcats-both",
+      "phase": "tune",
+      "macro_recall50": 0.28710416666666666,
+      "micro_recall50": 0.2751141552511416
+    },
+    {
+      "name": "mixed+char + location+microcats",
+      "phase": "tune",
+      "macro_recall50": 0.4250729166666667,
+      "micro_recall50": 0.4143835616438356
+    },
+    {
+      "name": "mixed+char + location+microcats+pop",
+      "phase": "tune",
+      "macro_recall50": 0.4272604166666667,
+      "micro_recall50": 0.4166666666666667
+    },
+    {
+      "name": "mixed+char + location+microcats+pop",
+      "phase": "test",
+      "macro_recall50": 0.3859166666666667,
+      "micro_recall50": 0.3838440111420613
+    },
+    {
+      "name": "best + exact-location quota 20",
+      "phase": "test",
+      "macro_recall50": 0.47787797619047623,
+      "micro_recall50": 0.479108635097493
+    },
+    {
+      "name": "best + exact-location quota 30",
+      "phase": "test",
+      "macro_recall50": 0.4865758928571428,
+      "micro_recall50": 0.49025069637883006
+    },
+    {
+      "name": "best + exact-location quota 40",
+      "phase": "test",
+      "macro_recall50": 0.4879300595238095,
+      "micro_recall50": 0.4924791086350975
+    },
+    {
+      "name": "logistic supervised reranker",
+      "phase": "test",
+      "macro_recall50": 0.5774568452380953,
+      "micro_recall50": 0.5827298050139276
+    },
+    {
+      "name": "logistic reranker + exact-location quota 20",
+      "phase": "test",
+      "macro_recall50": 0.5780818452380952,
+      "micro_recall50": 0.5832869080779944
+    },
+    {
+      "name": "logistic reranker + exact-location quota 30",
+      "phase": "test",
+      "macro_recall50": 0.5780818452380952,
+      "micro_recall50": 0.5832869080779944
+    },
+    {
+      "name": "logistic reranker + exact-location quota 40",
+      "phase": "test",
+      "macro_recall50": 0.5780818452380952,
+      "micro_recall50": 0.5832869080779944
+    },
+    {
+      "name": "logistic + leakage-safe history RRF weight 0.5",
+      "phase": "test",
+      "macro_recall50": 0.5774047619047619,
+      "micro_recall50": 0.5821727019498607
+    },
+    {
+      "name": "logistic + leakage-safe history RRF weight 1.0",
+      "phase": "test",
+      "macro_recall50": 0.5801651785714286,
+      "micro_recall50": 0.5844011142061282
+    },
+    {
+      "name": "logistic + leakage-safe history RRF weight 2.0",
+      "phase": "test",
+      "macro_recall50": 0.5801651785714286,
+      "micro_recall50": 0.5844011142061282
+    },
+    {
+      "name": "best segment: has_exact_query_history (n=1365)",
+      "phase": "segment",
+      "macro_recall50": 0.3768986568986569,
+      "micro_recall50": 0.3754813863928113
+    },
+    {
+      "name": "best segment: no_exact_query_history (n=235)",
+      "phase": "segment",
+      "macro_recall50": 0.43829787234042555,
+      "micro_recall50": 0.4388185654008439
+    },
+    {
+      "name": "best segment: exact_location_exists (n=1380)",
+      "phase": "segment",
+      "macro_recall50": 0.38475845410628023,
+      "micro_recall50": 0.3818646232439336
+    },
+    {
+      "name": "best segment: exact_location_absent (n=220)",
+      "phase": "segment",
+      "macro_recall50": 0.3931818181818182,
+      "micro_recall50": 0.39737991266375544
+    }
+  ]
+}
