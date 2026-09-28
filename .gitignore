@@ -1,0 +1,27 @@
+.DS_Store
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*.zip
+*.parquet
+*.npz
+*.npy
+
+# Local source data and generated Kaggle artifacts
+data/
+kaggle_output*/
+kaggle_finetune_log/
+kaggle_upload_data/
+kaggle_kernel*/
+yandex_*.json
+
+# Root-level scratch outputs; the submitted file is kept in submissions/.
+/answer*.csv
+/solution*_executed.ipynb
+/*.ipynb
+!/avito_solution.ipynb
+/*.py
+/*.json
+/*.md
+!/README.md
